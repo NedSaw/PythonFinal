@@ -37,7 +37,7 @@ def convert(message: telebot.types.Message):
         bot.reply_to(message, f'Failed command\n{e}')
     else:
 
-        text = f'Price {amount} {quote} in {base} - {total_base}'
+        text = f'Цена {amount} {quote} в {base} = {total_base*int(amount)} {base}.'
         bot.send_message(message.chat.id, text)
 
 
